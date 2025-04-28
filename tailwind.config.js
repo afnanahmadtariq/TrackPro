@@ -107,7 +107,7 @@ module.exports = {
         "pulse-ring": "pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite",
       },
       backgroundImage: {
-        "hero-pattern": "url('/placeholder.svg?height=1080&width=1920')",
+        "hero-pattern": "url('https://images.unsplash.com/photo-1523527676640-a738bddf657c?w=1920&auto=format&fit=crop')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "dot-pattern": "radial-gradient(circle, #00000010 1px, transparent 1px)",
       },

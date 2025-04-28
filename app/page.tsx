@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 import { HeroSection } from "@/components/hero-section"
@@ -75,7 +76,13 @@ export default function HomePage() {
                 </Link>
               </div>
               <div className="bg-primary h-64 md:h-auto relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=800')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+                <Image
+                  src="https://images.unsplash.com/photo-1686721064685-7150231e718e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RXhwZXJpZW5jZSUyMFJlYWwlMjBUaW1lJTIwVmVoaWNsZSUyMFRyYWNraW5nfGVufDB8fDB8fHwy?q=80&w=1600&auto=format&fit=crop"
+                  alt="Vehicle tracking map interface"
+                  fill
+                  className="object-cover opacity-90 mix-blend-overlay"
+                  priority
+                />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative">
                     <div className="h-20 w-20 rounded-full bg-white/10 flex items-center justify-center">

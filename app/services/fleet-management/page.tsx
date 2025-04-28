@@ -56,7 +56,7 @@ export default function FleetManagementPage() {
             </div>
             <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800"></div>
-              <div className="absolute inset-0 bg-[url('/placeholder.svg?height=400&width=600')] bg-cover bg-center opacity-60 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1655666272075-677ae07b90e0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RmxlZXQlMjBNYW5hZ2VtZW50fGVufDB8fDB8fHwy')] bg-cover bg-center opacity-90 mix-blend-overlay"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative">
                   <div className="h-20 w-20 rounded-full bg-white/10 flex items-center justify-center">
@@ -119,7 +119,7 @@ export default function FleetManagementPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Fleet Management Dashboard"
                 fill
                 className="object-cover"
@@ -184,7 +184,7 @@ export default function FleetManagementPage() {
                   </div>
                   <div className="relative h-[250px] rounded-xl overflow-hidden shadow-md">
                     <Image
-                      src="/placeholder.svg?height=250&width=400"
+                      src={useCase.imageUrl}
                       alt={useCase.title}
                       fill
                       className="object-cover"
@@ -288,6 +288,7 @@ const useCases = [
       "Monitor driver hours of service compliance",
       "Streamline maintenance scheduling and reduce downtime",
     ],
+    imageUrl: "https://images.unsplash.com/photo-1659841448455-5da6f2255292?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "delivery",
@@ -301,6 +302,7 @@ const useCases = [
       "Reduce fuel consumption and vehicle wear",
       "Improve proof of delivery and customer communication",
     ],
+    imageUrl: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaXZlcnklMjB2YW58ZW58MHx8MHx8fDA%3D",
   },
   {
     id: "field-service",
@@ -314,5 +316,6 @@ const useCases = [
       "Improve first-time fix rates with better preparation",
       "Enhance customer satisfaction with accurate arrival times",
     ],
+    imageUrl: "https://images.unsplash.com/photo-1629608934925-725d09a4eb9a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmllbGQlMjBzZXJ2aWNlfGVufDB8fDB8fHwy",
   },
 ]

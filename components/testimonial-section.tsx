@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react"
+import Image from "next/image" // Import Image component
 
 export function TestimonialSection() {
   return (
@@ -23,7 +24,15 @@ export function TestimonialSection() {
               </div>
               <p className="text-gray-600 mb-6 italic">{testimonial.quote}</p>
               <div className="flex items-center">
-                <div className="h-12 w-12 bg-gray-200 rounded-full mr-4"></div>
+                {/* Replace placeholder div with Image component */}
+                <div className="relative h-12 w-12 rounded-full mr-4 overflow-hidden">
+                   <Image
+                    src={testimonial.imageUrl}
+                    alt={testimonial.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <h4 className="font-medium">{testimonial.name}</h4>
                   <p className="text-gray-500 text-sm">{testimonial.position}</p>
@@ -43,17 +52,20 @@ const testimonials = [
       "Since implementing this tracking system, we've reduced fuel costs by 20% and improved delivery times significantly.",
     name: "Sarah Johnson",
     position: "Fleet Manager, Logistics Co.",
+    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D", // Replaced with Unsplash URL
   },
   {
     quote:
       "The real-time tracking has been a game-changer for our business. Customer satisfaction has improved dramatically.",
     name: "Michael Chen",
     position: "Operations Director, Delivery Inc.",
+    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D", // Replaced with Unsplash URL
   },
   {
     quote:
       "We recovered two stolen vehicles within hours thanks to the tracking system. The investment has paid for itself already.",
     name: "David Rodriguez",
     position: "Security Manager, Transport Ltd.",
+    imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBvcnRyYWl0fGVufDB8fDB8fHww", // Replaced with Unsplash URL
   },
 ]

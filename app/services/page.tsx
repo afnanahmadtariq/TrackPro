@@ -45,7 +45,16 @@ export default function ServicesPage() {
               </div>
             </CardContent>
             <CardFooter>
-              <Link href="/contact" className="w-full">
+              <Link 
+                href={
+                  service.title === "Real-Time GPS Tracking" 
+                    ? "/services/gps-tracking" 
+                    : service.title === "Fleet Management" 
+                      ? "/services/fleet-management" 
+                      : "/services/theft-recovery"
+                } 
+                className="w-full"
+              >
                 <Button className="w-full">Learn More</Button>
               </Link>
             </CardFooter>

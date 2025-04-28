@@ -11,10 +11,16 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Vehicle Tracking Solutions | Professional GPS Tracking",
+  title: "TrackPro",
   description:
     "Professional vehicle tracking solutions for businesses. Real-time GPS tracking, fleet management, and theft recovery services.",
-    generator: 'v0.dev'
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: { url: '/apple-touch-icon.png' },
+  },
 }
 
 export default function RootLayout({

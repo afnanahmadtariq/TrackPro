@@ -56,7 +56,7 @@ export default function GPSTrackingPage() {
             </div>
             <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800"></div>
-              <div className="absolute inset-0 bg-[url('/placeholder.svg?height=400&width=600')] bg-cover bg-center opacity-60 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1538905386057-4a5a580c45a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')] bg-cover bg-center opacity-60 mix-blend-overlay"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative">
                   <div className="h-20 w-20 rounded-full bg-white/10 flex items-center justify-center">
@@ -176,7 +176,12 @@ export default function GPSTrackingPage() {
                   </div>
                   <div className="relative h-[250px] rounded-xl overflow-hidden shadow-md">
                     <Image
-                      src="/placeholder.svg?height=250&width=400"
+                      src={useCase.id === "logistics" 
+                        ? "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        : useCase.id === "construction"
+                        ? "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        : "https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                      }
                       alt={useCase.title}
                       fill
                       className="object-cover"

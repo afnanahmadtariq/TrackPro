@@ -72,7 +72,7 @@ export function Navbar() {
           </Link>
         </nav>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center ml-6">
           <div className="hidden md:block">
             <Link href="/contact">
               <Button className="bg-primary hover:bg-primary/90">Get Started</Button>
@@ -81,7 +81,7 @@ export function Navbar() {
 
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
+              <Button variant="outline" size="icon" className="md:hidden ml-4">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>

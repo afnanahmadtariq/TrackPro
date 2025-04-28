@@ -55,7 +55,7 @@ export default function TheftRecoveryPage() {
             </div>
             <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800"></div>
-              <div className="absolute inset-0 bg-[url('/placeholder.svg?height=400&width=600')] bg-cover bg-center opacity-60 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599250300451-17cb25279c07?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8VmVoaWNsZSUyMFRoZWZ0JTIwUmVjb3Zlcnl8ZW58MHx8MHx8fDI%3D&auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-60 mix-blend-overlay"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative">
                   <div className="h-20 w-20 rounded-full bg-white/10 flex items-center justify-center">
@@ -162,7 +162,19 @@ export default function TheftRecoveryPage() {
               <Card key={index} className="overflow-hidden border-none shadow-lg">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-secondary"></div>
                 <div className="relative h-48">
-                  <Image src="/placeholder.svg?height=200&width=400" alt={story.title} fill className="object-cover" />
+                  <Image 
+                    src={story.title.includes("Delivery Van") 
+                      ? "https://images.unsplash.com/photo-1652595057288-d280aa149dec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRlbGl2ZXJ5JTIwdmFufGVufDB8fDB8fHwy&auto=format&fit=crop&w=800&q=80"
+                      : story.title.includes("Construction") 
+                      ? "https://media.istockphoto.com/id/1544895646/photo/female-construction-worker-operating-with-excavator.webp?a=1&b=1&s=612x612&w=0&k=20&c=hKOP7ag96bjtNPR-yDwV6Wu1AMnK6F647ZS_SYWZtNQ=&auto=format&fit=crop&w=800&q=80"
+                      : story.title.includes("Fleet") 
+                      ? "https://media.istockphoto.com/id/1289928297/photo/white-semi-trailer-truck-heading-down-a-four-lane-highway-at-dusk.webp?a=1&b=1&s=612x612&w=0&k=20&c=SL4PH3ZHTgMn2MUbxfVeQBV9XcIt8GBH9s-odU0srj0=&auto=format&fit=crop&w=800&q=80"
+                      : "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    } 
+                    alt={story.title} 
+                    fill 
+                    className="object-cover" 
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-4">
                     <div className="bg-primary text-white text-xs font-bold px-2 py-1 rounded-full inline-block mb-2">

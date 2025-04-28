@@ -10,6 +10,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { VehicleMap } from "@/components/vehicle-map"
 import { VehicleList } from "@/components/vehicle-list"
 import { VehicleDetails } from "@/components/vehicle-details"
+import dynamic from "next/dynamic"
+
+// Dynamically import the map component with no SSR to avoid hydration issues
+const DynamicVehicleMap = dynamic(
+  () => import("@/components/vehicle-map").then((mod) => mod.VehicleMap),
+  { ssr: false }
+)
 
 export default function TrackingDemoPage() {
   const [selectedVehicle, setSelectedVehicle] = useState<string | null>(null)
@@ -54,8 +61,8 @@ export default function TrackingDemoPage() {
               <CardDescription>Current location of all vehicles</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="h-[400px] bg-gray-100 rounded-md overflow-hidden">
-                <VehicleMap selectedVehicle={selectedVehicle} />
+              <div className="h-[400px] rounded-md overflow-hidden">
+                <DynamicVehicleMap selectedVehicle={selectedVehicle} />
               </div>
             </CardContent>
           </Card>

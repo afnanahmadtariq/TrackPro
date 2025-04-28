@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background with gradient -->
+  <rect width="512" height="512" rx="102.4" fill="url(#gradient)" />
+  
+  <!-- Location pin icon (scaled to fit nicely within the background) -->
+  <g transform="translate(128, 128) scale(10.67)">
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <circle cx="12" cy="10" r="3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+  
+  <!-- Gradient definition (with hardcoded primary and accent colors) -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284c7" /> <!-- Tailwind sky-600 as primary -->
+      <stop offset="100%" stop-color="#2dd4bf" /> <!-- Tailwind teal-400 as accent -->
+    </linearGradient>
+  </defs>
+</svg>
