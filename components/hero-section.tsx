@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 
@@ -45,9 +46,26 @@ export function HeroSection() {
             </div>
 
             <div className="mt-12 flex items-center gap-6">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-300"></div>
+              <div className="flex -space-x-4 items-center">
+                {[
+                  { id: 1, logo: "/images/company-logos/image1.png", alt: "Company 1" },
+                  { id: 2, logo: "/images/company-logos/image2.png", alt: "Company 2" },
+                  { id: 3, logo: "/images/company-logos/image3.png", alt: "Company 3" },
+                  { id: 4, logo: "/images/company-logos/image4.png", alt: "Company 4" },
+                  { id: 5, logo: "/images/company-logos/image5.png", alt: "Company 5" },
+                ].map((company) => (
+                  <div 
+                    key={company.id} 
+                    className="w-10 h-10 rounded-full border-2 border-white bg-white/90 flex items-center justify-center overflow-hidden"
+                  >
+                    <Image 
+                      src={company.logo} 
+                      alt={company.alt}
+                      width={28} 
+                      height={28} 
+                      className="object-contain"
+                    />
+                  </div>
                 ))}
               </div>
               <p className="text-sm text-white/80">
